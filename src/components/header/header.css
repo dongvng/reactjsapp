@@ -1,0 +1,104 @@
+.header{
+    position: absolute;
+    width: 90%;
+    height: 15%;
+    right: 15px;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+}
+.headerInput{
+    width: 100%;
+    border-radius: 20px;
+    padding: 0 40px 0 15px;
+    height: 35px;
+    border: 1px solid rgb(155, 190, 189);
+    outline: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: all 0.3s;
+}
+.headerInput:focus{
+    border: 1px solid #999;
+    box-shadow: 0 0 8px deepskyblue;
+}
+.left-header{
+    position: relative;
+    width: 25%;
+    height: 60%;
+    text-align: left;
+    padding-top: 10px;
+}
+.searchIcon{
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
+}
+.right-header{
+    width: 75%;
+    text-align: right;
+}
+.item-header{
+    width: 100%;
+    height: 100%;
+    padding: 10px 15px 0 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.ringingBell{
+    animation: ringing 0.5s linear infinite;
+}
+@keyframes ringing{
+    0%{transform: rotate(0deg);}
+    25%{transform: rotate(-30deg);}
+    75%{transform: rotate(30deg);}
+    100%{transform: rotate(0deg);}
+}
+.notiFormat{
+    display: flex!important;
+    flex-direction: row;
+    align-items: center;
+    background-color: #fcfcfc!important;
+    border-top: 1px solid #bbb!important;
+}
+.notiFormat:hover{
+    background-color: #eee!important;
+}
+.left-noti{
+    width: 10%;
+}
+.right-noti{
+    width: 90%;
+    font-size: 16px!important;
+    padding-top: 10px;
+}
+.child-item{
+    padding-top: 10px;
+    margin-left: 15px;
+}
+.drd-btn{
+    padding: 0!important;
+    background-color: #f5f7fa!important;
+    border: none!important;
+    color: black!important;
+    
+    box-shadow: none!important;
+}
+.drd-btn:focus{
+    border: none!important;
+}
+.pos-ring{
+    left: -170px!important;
+    top: 10px!important;
+    padding-bottom: 0!important;
+}
+.pos-pro{
+    left: -50px!important;
+    top: 10px!important;
+}
+.pos-lang{
+    left: -100px!important;
+    top: 10px!important;
+}

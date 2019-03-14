@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Laila');
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 5px;
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: none; 
+    border-radius: 5px;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #aaa; 
+}
+
+.functionality{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 16px;
+    height: 100%;
+    overflow: auto;
+}
+.headFilter{
+    font-family: 'Laila', serif;
+    font-size: 18px;
+    text-align: left!important;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-left: -100px;
+    text-transform: uppercase;
+}
+.fB-2{
+    margin-left: -120px;
+}
+.fB-3{
+    margin-left: -140px;
+}
+.addtask{
+    color: white;
+    border-color: #ff586b!important;
+    width: 80%;
+    height: 40px;
+    padding: 0px 10px!important;
+    background-color: #ff586b!important;
+    text-transform: capitalize;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px!important;
+    box-shadow: 2px 6px 4px #ccc;
+}
+.addtask:hover, .addBtn:hover{
+    cursor: pointer;
+}
+.addBtn{
+    color: white;
+    width: 80%;
+    height: 40px;
+    padding: 0px 10px;
+    background-color: #009da0;
+    text-transform: capitalize;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+}
+.filter{
+    color: #555;
+    text-align: center;
+    padding: 10px 10px;
+    display: block;
+    width: 80%;
+    outline: none!important;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s;
+    /* margin-bottom: 3px; */
+    background-color: #f5f7fa;
+}
+.filter:hover{
+    cursor: pointer;
+    background-color: #ddd;
+}
+.filterBox{
+    
+    display:flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+}
+
+.labelInput{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.modalInput{
+    display: block;
+    width: 100%;
+    height: 35px;
+    padding-left: 10px;
+    padding-right: 5px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s;
+}
+.modalInput:focus{
+    box-shadow: 0 0 8px deepskyblue;
+}
+
+.row-2{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.special-checkbox:focus{
+    box-shadow: none;
+}

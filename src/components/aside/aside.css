@@ -1,0 +1,36 @@
+.aside{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 5%;
+    overflow: auto;
+    background-color: rgb(70, 44, 44);
+}
+.listIcon{
+    width: 100%;
+    padding-left: 0;
+    margin: 0;
+    padding-top: 80px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.iconEach{
+    width: 100%!important;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+.iconEach:hover{
+    cursor: pointer;
+    background-color: rgb(37, 20, 20);
+}
+.active{
+    cursor: pointer;
+    background-color: rgb(37, 20, 20);
+    border-right: 4px solid pink;
+}

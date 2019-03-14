@@ -1,0 +1,119 @@
+.todolist{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: auto; 
+    box-sizing: border-box;
+}
+
+.searchInput{
+    width: 90%;
+    border-radius: 20px;
+    padding: 0px 15px;
+    height: 35px;
+    border: 1px solid rgb(155, 190, 189);
+    outline: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: all 0.3s;
+}
+.searchInput:focus{
+    border: 1px solid #999;
+    box-shadow: 0 0 8px deepskyblue;
+}
+
+.todoContain{
+    list-style: none;
+    padding: 0;
+    width:100%;
+    overflow: auto!important;
+}
+.todoContain::-webkit-scrollbar {
+    width: 0px;
+}
+.todoItem, .todoItem2{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+    padding-left: 85px;
+    padding-right: 40px;
+    height: 90px;
+    margin: 0;
+    text-align: left;
+}
+.todoItem:hover{
+    background-color: #eee;
+    border: 2px solid #eee!important;
+}
+.todoItem2:hover{
+    background-color: #c7ecee!important;
+    border: 2px solid #c7ecee!important;
+}
+.todoItem:hover .delete{
+    opacity: 1;
+}
+.todoItem2:hover .delete{
+    opacity: 1;
+}
+.titleItem{
+    height: 30px;
+    width: 76%;
+    overflow: hidden;
+    position: absolute;
+    font-size: 18px;
+    top: 15px;
+}
+.titleItem:hover{
+    cursor: pointer;
+}
+.designation{
+    position: absolute;
+    font-size: 14px;
+    bottom: 15px;
+    border-radius: 5px;
+    padding: 2px 8px;
+    color: white;
+    left: 165px;
+}
+.project{
+    position: absolute;
+    font-size: 14px;
+    bottom: 15px;
+    padding: 2px 8px;
+    color: white;
+    border-radius: 5px;
+}
+.undone{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.emptyStar{
+    position: absolute;
+    left: 52px;
+    top: 50%;
+    transform: translateY(30%);
+}
+.priority{
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-100%);
+}
+.delete{
+    position: absolute;
+    right: 10px;
+    top: 35%;
+    transform: rotate(0deg) ;
+    opacity: 0;
+    transition: transform 0.8s;
+}
+.delete:hover{
+    cursor: pointer;
+    transform: rotate(180deg);
+}
+.undone:hover, .emptyStar:hover, .priority:hover{
+    cursor: pointer;
+}

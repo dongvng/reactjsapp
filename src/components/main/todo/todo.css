@@ -1,0 +1,31 @@
+.todoContainer{
+    position: absolute;
+    width: 90%;
+    height: 80%;
+    bottom: 30px;
+    right: 15px;
+    background-color:#fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    border: 1px solid rgb(155, 190, 189);
+}
+.todoPieceF, .todoPieceD, .todoPieceT{
+    height: 100%;
+}
+.todoPieceF{
+    flex-basis: 200px;
+    flex-grow: 2;
+    border-right: 1px solid rgb(155, 190, 189);
+}
+.todoPieceD{
+    flex-basis: 350px;
+    flex-grow: 5;
+   
+}
+.todoPieceT{
+    flex-basis: 350px;
+    flex-grow: 4;
+     border-right: 1px solid rgb(155, 190, 189);
+}

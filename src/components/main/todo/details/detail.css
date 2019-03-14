@@ -1,0 +1,120 @@
+.detail{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+.iconDetail{
+    position: relative;
+    height: 40px;
+    margin-top: 15px;
+    width: 100%;
+    padding: 5px 15px;
+}
+.emptyStarDetail{
+    position: absolute;
+    left: 10px;
+    top: 2px;
+}
+.priorityDetail{
+    position: absolute;
+    left: 40px;
+    top: 0;
+}
+.emptyStarDetail:hover, .priorityDetail:hover{
+    cursor: pointer;
+}
+.modifiedButton{
+    position: absolute;
+    right: 16px;
+    top: 0;
+    margin-top: -5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    transition: all 0.3s;
+}
+.modifiedButton:hover{
+    outline: none;
+    background-color: #0cc27e;
+}
+.modifyDetail{
+    margin-right: 20px;
+}
+.user-date, .infoDetail{
+    width: 100%;
+    height: auto;
+    padding-bottom: 30px;
+    margin-top: 15px;
+    padding-right: 15px;
+}
+
+.info-user-date{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+.detailEle{
+    font-size: 26px;
+    text-align: left;
+    padding-left: 30px;
+    color: #535c68;
+}
+.commonStyle{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+    padding-left: 30px;
+}
+.defaultDetail{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+.modifiedInput{
+    display: block;
+    width: 80%;
+    height: 35px;
+    margin-left: 5px;
+    padding-left: 10px;
+    padding-right: 5px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s;
+}
+.modifiedInput:focus{
+    box-shadow: 0 0 8px deepskyblue;
+}
+.subInfo{
+    color: #888;
+    font-size: 13px;
+    text-align: left;
+    padding-left: 20px;
+}
+.subInfo p{
+    margin-bottom: 0;
+}
+.inputContainer{
+    display: flex;
+    justify-content: center;
+}
+.textareaInput{
+    display: flex;
+    justify-content: center;
+    margin-right: 15px;
+    font-size: 14px;
+}
+.plus{
+    padding: 5px 10px;
+    width: 90%;
+    word-wrap: break-word;
+    /* overflow: scroll; */
+}
