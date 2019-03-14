@@ -11,7 +11,6 @@ import event from '../../resources/icon/event2.png'
 export default class Bellring extends React.Component {
   constructor(props) {
     super(props);
-
     this.toggle = this.toggle.bind(this);
     this.state = {
       dropdownOpen: false

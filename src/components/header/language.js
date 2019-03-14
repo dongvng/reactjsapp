@@ -9,13 +9,12 @@ import spain from '../../resources/icon/spain.png'
 export default class Language extends React.Component {
   constructor(props) {
     super(props);
-    this.toggle = this.toggle.bind(this);
     this.state = {
       dropdownOpen: false
     };
   }
 
-  toggle() {
+  toggle = () =>{
     this.setState(prevState => ({
       dropdownOpen: !prevState.dropdownOpen
     }));

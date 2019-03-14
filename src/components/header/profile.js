@@ -12,14 +12,12 @@ import person from '../../resources/icon/person.png'
 export default class Profile extends React.Component {
   constructor(props) {
     super(props);
-
-    this.toggle = this.toggle.bind(this);
     this.state = {
       dropdownOpen: false
     };
   }
 
-  toggle() {
+  toggle = () =>{
     this.setState(prevState => ({
       dropdownOpen: !prevState.dropdownOpen
     }));

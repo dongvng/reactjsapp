@@ -12,7 +12,6 @@ import priority from '../../../../resources/icon/priority.png'
 import normalStar from '../../../../resources/icon/normalStar.png'
 
 export default class Functionality extends Component {
- 
   render() {
     return (
 	 <div className="functionality">

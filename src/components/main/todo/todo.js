@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-
 import './todo.css'
 
 import Functionality from './functionality/functionality'
@@ -24,86 +23,49 @@ export default class Todo extends Component {
       searchTodo: "",
       number: ""
     }
-    //handle modal
-    this.handleCheckChange = this.handleCheckChange.bind(this);
-    this.handleTitleChange = this.handleTitleChange.bind(this);
-    this.handleOwnerChange = this.handleOwnerChange.bind(this);
-    this.handleStartDateChange = this.handleStartDateChange.bind(this);
-    this.handleDueDateChange = this.handleDueDateChange.bind(this);
-    this.handleProjectChange = this.handleProjectChange.bind(this);
-    this.handleDesignationChange = this.handleDesignationChange.bind(this);
-    this.handleCommentChange = this.handleCommentChange.bind(this);
-    this.handleAddTask = this.handleAddTask.bind(this);
-    // modify state of todo
-    this.handleUndone = this.handleUndone.bind(this);
-    this.handlePriority = this.handlePriority.bind(this);
-    this.handleStar = this.handleStar.bind(this);
-    this.handleDelete = this.handleDelete.bind(this);
-    this.handleDetail = this.handleDetail.bind(this);
-    this.handleSearchTodo = this.handleSearchTodo.bind(this);
-    // filter todolist
-    this.handleFilterAll = this.handleFilterAll.bind(this);
-    this.handleFilterProjectA = this.handleFilterProjectA.bind(this);
-    this.handleFilterProjectB = this.handleFilterProjectB.bind(this);
-    this.handleFilterStar = this.handleFilterStar.bind(this);
-    this.handleFilterPriority = this.handleFilterPriority.bind(this);
-    this.handleFilterDone = this.handleFilterDone.bind(this);
-    this.handleFilterUiUx = this.handleFilterUiUx.bind(this);
-    this.handleFilterBackend = this.handleFilterBackend.bind(this);
-    this.handleFilterFrontEnd = this.handleFilterFrontEnd.bind(this);
-    //modify state in detail field
-    this.handleStarDetail = this.handleStarDetail.bind(this);
-    this.handlePriorityDetail = this.handlePriorityDetail.bind(this);
-    this.handleModifiedTitle = this.handleModifiedTitle.bind(this);
-    this.handleModifiedComment = this.handleModifiedComment.bind(this);
-    this.handleModifiedDesignation = this.handleModifiedDesignation.bind(this);
-    this.handleModifiedDuedate = this.handleModifiedDuedate.bind(this);
-    this.handleModifiedOwner = this.handleModifiedOwner.bind(this);
-    this.handleModifiedProject = this.handleModifiedProject.bind(this);
   }
-  
-  handleTitleChange(title){
+  handleTitleChange = (title) => {
     this.setState({
       title: title
     })
   }
-  handleOwnerChange(owner){
+  handleOwnerChange = (owner) =>{
     this.setState({
       owner: owner
     })
   }
-  handleStartDateChange(startDate){
+  handleStartDateChange = (startDate) =>{
     this.setState({
       startDate: startDate
     })
   }
-  handleDueDateChange(dueDate){
+  handleDueDateChange = (dueDate) =>{
     this.setState({
       dueDate: dueDate
     })
   }
-  handleCommentChange(comments){
+  handleCommentChange = (comments) =>{
     this.setState({
       comments: comments
     })
   }
-  handleProjectChange(project){
+  handleProjectChange = (project) =>{
     this.setState({
       project: project
     })
   }
-  handleDesignationChange(designation){
+  handleDesignationChange = (designation) =>{
     this.setState({
       designation: designation
     })
   }
-  handleCheckChange(){
+  handleCheckChange = () =>{
     this.setState((prevState) => ({
         check : !prevState.check
     }))
   }
   
-  handleAddTask(){
+  handleAddTask = () =>{
     if(this.state.title && this.state.owner){
       this.setState((prevState) => ({
         todolist: prevState.todolist.concat({
@@ -133,7 +95,7 @@ export default class Todo extends Component {
   }
   
   // modify state of todo
-  handleUndone(todo){
+  handleUndone = (todo) =>{
     var index = this.state.todolist.indexOf(todo);
     this.setState({
       todolist: [
@@ -143,7 +105,7 @@ export default class Todo extends Component {
       ]
     })
   }
-  handleStar(todo){
+  handleStar = (todo) =>{
     var index = this.state.todolist.indexOf(todo);
     this.setState({
       todolist: [
@@ -153,7 +115,7 @@ export default class Todo extends Component {
       ]
     })
   }
-  handlePriority(todo){
+  handlePriority = (todo) =>{
     var index = this.state.todolist.indexOf(todo);
     this.setState({
       todolist: [
@@ -163,7 +125,7 @@ export default class Todo extends Component {
       ]
     })
   }
-  handleDelete(todo){
+  handleDelete = (todo) =>{
     var index = this.state.todolist.indexOf(todo);
     this.setState({
       todolist: [
@@ -172,7 +134,7 @@ export default class Todo extends Component {
       ]
     })
   }
-  handleDetail(todo){
+  handleDetail = (todo) =>{
     var index;
     if(!this.state.filterClick){
       index = this.state.todolist.indexOf(todo);
@@ -184,7 +146,7 @@ export default class Todo extends Component {
     })
   }
 
-  handleSearchTodo(val){
+  handleSearchTodo = (val) =>{
     this.setState({
       searchTodo: val
     })
@@ -204,13 +166,13 @@ export default class Todo extends Component {
   }
 
   //handle filter todolist
-  handleFilterAll(){
+  handleFilterAll = () =>{
     this.setState({
       filterlist: "",
       filterClick: false
     })
   }
-  handleFilterProjectA(){
+  handleFilterProjectA = () =>{
     this.setState({
       filterlist: this.state.todolist.filter((todo) => {
         return todo.project === "projectA"
@@ -218,7 +180,7 @@ export default class Todo extends Component {
       filterClick: true
     })
   }
-  handleFilterProjectB(){
+  handleFilterProjectB = () =>{
     this.setState({
       filterlist: this.state.todolist.filter((todo) => {
         return todo.project === "projectB"
@@ -226,7 +188,7 @@ export default class Todo extends Component {
       filterClick: true
     })
   }
-  handleFilterDone(){
+  handleFilterDone = () =>{
     this.setState({
       filterlist: this.state.todolist.filter((todo) => {
         return todo.isDone === true
@@ -234,7 +196,7 @@ export default class Todo extends Component {
       filterClick: true
     })
   }
-  handleFilterStar(){
+  handleFilterStar = () =>{
     this.setState({
       filterlist: this.state.todolist.filter((todo) => {
         return todo.onStar === true
@@ -242,7 +204,7 @@ export default class Todo extends Component {
       filterClick: true
     })
   }
-  handleFilterPriority(){
+  handleFilterPriority = () =>{
     this.setState({
       filterlist: this.state.todolist.filter((todo) => {
         return todo.onPriority === true
@@ -250,7 +212,7 @@ export default class Todo extends Component {
       filterClick: true
     })
   }
-  handleFilterUiUx(){
+  handleFilterUiUx = () =>{
     this.setState({
       filterlist: this.state.todolist.filter((todo) => {
         return todo.designation === "uiux"
@@ -258,7 +220,7 @@ export default class Todo extends Component {
       filterClick: true
     })
   }
-  handleFilterBackend(){
+  handleFilterBackend = () =>{
     this.setState({
       filterlist: this.state.todolist.filter((todo) => {
         return todo.designation === "backend"
@@ -266,7 +228,7 @@ export default class Todo extends Component {
       filterClick: true
     })
   }
-  handleFilterFrontEnd(){
+  handleFilterFrontEnd = () =>{
     this.setState({
       filterlist: this.state.todolist.filter((todo) => {
         return todo.designation === "frontend"
@@ -275,7 +237,7 @@ export default class Todo extends Component {
     })
   }
 
-  handleStarDetail(detailTodo){
+  handleStarDetail = (detailTodo) =>{
     var todoIndex = this.state.todolist.indexOf(detailTodo);
     this.setState({
       todolist: [
@@ -285,7 +247,7 @@ export default class Todo extends Component {
       ]
     })
   }
-  handlePriorityDetail(detailTodo){
+  handlePriorityDetail = (detailTodo) =>{
     var todoIndex2 = this.state.todolist.indexOf(detailTodo);
     this.setState({
       todolist: [
@@ -297,7 +259,7 @@ export default class Todo extends Component {
   }
 
   //handle todolist in detail field
-  handleModifiedTitle(value, detailTodo){
+  handleModifiedTitle = (value, detailTodo) =>{
     var todoIndex = this.state.todolist.indexOf(detailTodo);
     this.setState({
       todolist: [
@@ -307,7 +269,7 @@ export default class Todo extends Component {
       ]
     })
   }
-  handleModifiedOwner(value, detailTodo){
+  handleModifiedOwner = (value, detailTodo) =>{
     var todoIndex = this.state.todolist.indexOf(detailTodo);
     this.setState({
       todolist: [
@@ -317,7 +279,7 @@ export default class Todo extends Component {
       ]
     })
   }
-  handleModifiedComment(value, detailTodo){
+  handleModifiedComment = (value, detailTodo) =>{
     var todoIndex = this.state.todolist.indexOf(detailTodo);
     this.setState({
       todolist: [
@@ -327,7 +289,7 @@ export default class Todo extends Component {
       ]
     })
   }
-  handleModifiedDuedate(value, detailTodo){
+  handleModifiedDuedate = (value, detailTodo) =>{
     var todoIndex = this.state.todolist.indexOf(detailTodo);
     this.setState({
       todolist: [
@@ -337,7 +299,7 @@ export default class Todo extends Component {
       ]
     })
   }
-  handleModifiedProject(value, detailTodo){
+  handleModifiedProject = (value, detailTodo) =>{
     var todoIndex = this.state.todolist.indexOf(detailTodo);
     this.setState({
       todolist: [
@@ -347,7 +309,7 @@ export default class Todo extends Component {
       ]
     })
   }
-  handleModifiedDesignation(value, detailTodo){
+  handleModifiedDesignation = (value, detailTodo) =>{
     var todoIndex = this.state.todolist.indexOf(detailTodo);
     this.setState({
       todolist: [
@@ -371,7 +333,6 @@ export default class Todo extends Component {
               project={this.state.project}
               designation={this.state.designation}
               check={this.state.check}
-              
               onTitleChange={this.handleTitleChange} //update state 
               onOwnerChange={this.handleOwnerChange}
               onProjectChange={this.handleProjectChange}
@@ -381,7 +342,6 @@ export default class Todo extends Component {
               onCheckChange={this.handleCheckChange}
               onCommentChange={this.handleCommentChange}
               onAddTask={this.handleAddTask}
-
               onFilterAll={this.handleFilterAll} //begin of filter button
               onFilterProjectA={this.handleFilterProjectA}
               onFilterProjectB={this.handleFilterProjectB}
@@ -405,7 +365,7 @@ export default class Todo extends Component {
               onHandleDelete={this.handleDelete}
               onHandleDetail={this.handleDetail}
               searchTodo={this.handleSearchTodo}
-               />
+            />
         </div>
         <div className='todoPieceD'>
             <Details 
@@ -414,8 +374,7 @@ export default class Todo extends Component {
               number={this.state.number}
               onStarDetail={this.handleStarDetail}
               onPriorityDetail={this.handlePriorityDetail}
-
-              modifiedTitleDetail={this.handleModifiedTitle}
+              modifiedTitleDetail={this.handleModifiedTitle} //begin to modify state
               modifiedOwnerDetail={this.handleModifiedOwner}
               modifiedDuedateDetail={this.handleModifiedDuedate}
               modifiedCommentDetail={this.handleModifiedComment}

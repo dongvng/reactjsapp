@@ -9,51 +9,15 @@ class ModalExample extends React.Component {
     this.state = {
       modal: false
     }
-    this.toggle = this.toggle.bind(this);
-    
-    this.onCheckChange = this.onCheckChange.bind(this);
-    this.onTitleChange = this.onTitleChange.bind(this);
-    this.onStartDateChange = this.onStartDateChange.bind(this);
-    this.onDueDateChange = this.onDueDateChange.bind(this);
-    this.onOwnerChange = this.onOwnerChange.bind(this);
-    this.handleProjectChange = this.handleProjectChange.bind(this);
-    this.handleDesignationChange = this.handleDesignationChange.bind(this);
-    this.onCommentChange = this.onCommentChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
-  toggle(){
+  toggle = () => {
     this.setState(prevState => ({
       modal: !prevState.modal
     }));
   }
-  onTitleChange(e){
-    this.props.onTitleChange(e.target.value)
-  }
-  onOwnerChange(e){
-    this.props.onOwnerChange(e.target.value)
-  }
-  onStartDateChange(e){
-    this.props.onStartDateChange(e.target.value)
-  }
-  onDueDateChange(e){
-    this.props.onDueDateChange(e.target.value)
-  }
-  onCommentChange(e){
-    this.props.onCommentChange(e.target.value)
-  }
-  handleProjectChange(e){
-    this.props.onProjectChange(e.target.value)
-  }
-  handleDesignationChange(e){
-    this.props.onDesignationChange(e.target.value)
-  }
-  onCheckChange(e){
-    this.props.onCheckChange(e.target.defaultChecked)
-  }
   handleSubmit(e){
     e.preventDefault();
   }
-  
   render() {
     return (
       <div>
@@ -64,18 +28,18 @@ class ModalExample extends React.Component {
             <ModalBody style={{color: '#888'}}>
               <div>
                 <label htmlFor="titleinput" className="labelInput">title</label>
-                <input type="text" className="modalInput" onChange={this.onTitleChange} value={this.props.title} name="titleinput" required/>
+                <input type="text" className="modalInput" onChange={(e) => this.props.onTitleChange(e.target.value)} value={this.props.title} name="titleinput" required/>
               </div>
               <div className="row-2">
                 <div style={{width: '50%', paddingRight: '5px'}}>
                   <label htmlFor="ownerinput" className="labelInput">owner</label>
-                  <input type="text" className="modalInput" onChange={this.onOwnerChange} value={this.props.owner} name="ownerinput" required/>
+                  <input type="text" className="modalInput" onChange={(e) => this.props.onOwnerChange(e.target.value)} value={this.props.owner} name="ownerinput" required/>
                 </div>
                 <div style={{width: '50%', paddingLeft: '5px'}}>
                   <label htmlFor="projectinput" className="labelInput">
                     project
                   </label>
-                  <select value={this.props.project} className="modalInput" onChange={this.handleProjectChange} style={{color: '#888'}}>
+                  <select value={this.props.project} className="modalInput" onChange={(e) => this.props.onProjectChange(e.target.value)} style={{color: '#888'}}>
                     <option style={{color: '#888'}} value="projectA">Project A</option>
                     <option style={{color: '#888'}} value="projectB">Project B</option>
                   </select>
@@ -84,23 +48,23 @@ class ModalExample extends React.Component {
               <div className="row-2">
                 <div style={{width: '50%', paddingRight: '5px'}}>
                   <label htmlFor="startdate" className="labelInput">start date</label>
-                  <input type="text" className="modalInput" onChange={this.onStartDateChange} value={this.props.startDate} name="startdate"/>
+                  <input type="text" className="modalInput" onChange={(e) => this.props.onStartDateChange(e.target.value)} value={this.props.startDate} name="startdate"/>
                 </div>
                 <div style={{width: '50%', paddingLeft: '5px'}}>
                   <label htmlFor="duedate" className="labelInput">due date</label>
-                  <input type="text" className="modalInput" onChange={this.onDueDateChange} value={this.props.dueDate} name="duedate"/>
+                  <input type="text" className="modalInput" onChange={(e) => this.props.onDueDateChange(e.target.value)} value={this.props.dueDate} name="duedate"/>
                 </div>
               </div>
               <div className="row-2">
                 <div style={{width: '50%', paddingRight: '5px'}}>
                   <label htmlFor="priority" className="labelInput">priority</label>
-                  <input type="checkbox" defaultChecked={this.props.check} onChange={this.onCheckChange} className="modalInput special-checkbox" />
+                  <input type="checkbox" defaultChecked={this.props.check} onChange={(e) => this.props.onCheckChange(e.target.defaultChecked)} className="modalInput special-checkbox" />
                 </div>
                 <div style={{width: '50%', paddingLeft: '5px'}}>
                   <label htmlFor="taginput" className="labelInput">
                     tag
                   </label>
-                  <select value={this.props.designation} className="modalInput" onChange={this.handleDesignationChange} style={{color: '#888'}}>
+                  <select value={this.props.designation} className="modalInput" onChange={(e) => this.props.onDesignationChange(e.target.value)} style={{color: '#888'}}>
                     <option style={{color: '#888'}} value="uiux">UI/UX</option>
                     <option style={{color: '#888'}} value="frontend">Frontend</option>
                     <option style={{color: '#888'}} value="backend">Backend</option>
@@ -109,7 +73,7 @@ class ModalExample extends React.Component {
               </div>
               <div>
                 <label htmlFor="commentsinput" className="labelInput">comments</label>
-                <input type="text" onChange={this.onCommentChange} value={this.props.comments} className="modalInput" />
+                <input type="text" onChange={(e) => this.props.onCommentChange(e.target.value)} value={this.props.comments} className="modalInput" />
               </div>
             </ModalBody>
             <ModalFooter>

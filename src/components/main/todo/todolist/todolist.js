@@ -10,19 +10,6 @@ import redPriority from '../../../../resources/icon/onPriority.png'
 import onDelete from '../../../../resources/icon/delete.png'
 
 export default class Todolist extends Component {
-  
-  handleUnDone(todo){
-    this.props.onHandleUndone(todo);
-  }
-  onStar(todo){
-    this.props.onHandleStar(todo);
-  }
-  onPriority(todo){
-    this.props.onHandlePriority(todo);
-  }
-  onDelete(todo){
-    this.props.onHandleDelete(todo);
-  }
   render() {
     const {receiveState, filterlist, filterClick, number, searchValue} = this.props;
     const itemStyle = {
@@ -82,25 +69,25 @@ export default class Todolist extends Component {
                         width={24}
                         className="undone"
                         title="done"
-                        onClick={() => this.handleUnDone(todo)}/>
+                        onClick={() => this.props.onHandleUndone(todo)}/>
                   <img src={todo.onStar ? starred: emptyStar} 
                         alt="emptystar"
                         width={20}
                         className="emptyStar"
                         title="star"
-                        onClick={() => this.onStar(todo)}/>
+                        onClick={() => this.props.onHandleStar(todo)}/>
                   <img src={todo.onPriority ? redPriority: priority} 
                         alt="priority"
                         width={24}
                         className="priority"
                         title="priority"
-                        onClick={() => this.onPriority(todo)}/>
+                        onClick={() => this.props.onHandlePriority(todo)}/>
                   <img src={onDelete} 
                         alt="delete"
                         width={24}
                         className="delete"
                         title="delete"
-                        onClick={() => this.onDelete(todo)}/>
+                        onClick={() => this.props.onHandleDelete(todo)}/>
                   <p onClick={() => this.props.onHandleDetail(todo)}  style={todo.isDone ? itemStyle : null} title="click for specific content" className="titleItem">{todo.title}</p>
                   <div className="designation" style={todo.designation === 'uiux' ? blue : (todo.designation === 'frontend' ? green : coral)}>{todo.designation}</div>
                   <div className="project" style={todo.project === 'projectA' ? projectA : projectB}>{todo.project === "projectA" ? "Project A" : "Project B"}</div>
