@@ -12,10 +12,12 @@ class App extends Component {
       <div className="App">
         <Header />
         <Todo />
-        <Aside />
+        <Aside />	
       </div>
     );
   }
 }
 
 export default App;
+
+  
