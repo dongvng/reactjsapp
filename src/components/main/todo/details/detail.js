@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './detail.css'
+import '../../../../styles/common/detail.css'
 
 import usericon from '../../../../resources/icon/usericon.png'
 import calendar from '../../../../resources/icon/calendar.png'

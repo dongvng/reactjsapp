@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import plus from '../../../../resources/icon/plus-solid.svg'
-import "./functionality.css"
+import "../../../../styles/common/functionality.css"
 
 class ModalExample extends React.Component {
   constructor(props) {

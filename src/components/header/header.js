@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './header.css'
+import '../../styles/common/header.css'
 
 import Language from './language'
 import Profile from './profile'

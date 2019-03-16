@@ -1,5 +1,6 @@
 import React from 'react';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import '../../styles/common/header.css'
 
 import profile from '../../resources/icon/profile.png'
 import exit from '../../resources/icon/exit.png'

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './todo.css'
+import '../../../styles/common/todo.css'
 
 import Functionality from './functionality/functionality'
 import Details from './details/detail'
@@ -164,7 +164,6 @@ export default class Todo extends Component {
       })
     }
   }
-
   //handle filter todolist
   handleFilterAll = () =>{
     this.setState({

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './todolist.css'
+import '../../../../styles/common/todolist.css'
 
 import doneCheckmark from '../../../../resources/icon/done-checkmark.svg'
 import undone from '../../../../resources/icon/not-done.png'

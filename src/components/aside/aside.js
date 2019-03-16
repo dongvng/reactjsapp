@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './aside.css'
+import '../../styles/common/aside.css'
 
 import page from '../../resources/icon/page.png'
 import wheel from '../../resources/icon/wheel.png'

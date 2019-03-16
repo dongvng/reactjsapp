@@ -44,11 +44,11 @@
 }
 .todoItem:hover{
     background-color: #eee;
-    border: 2px solid #eee!important;
+    border: 2px solid #eee;
 }
 .todoItem2:hover{
     background-color: #c7ecee!important;
-    border: 2px solid #c7ecee!important;
+    border: 2px solid #c7ecee;
 }
 .todoItem:hover .delete{
     opacity: 1;

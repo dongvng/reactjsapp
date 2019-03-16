@@ -1,12 +1,14 @@
 import React from 'react';
+import '../../styles/common/header.css'
+
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-import './header.css'
 
 import notification from '../../resources/icon/noti.png'
 import profile from '../../resources/icon/profile.png'
 import packaging from '../../resources/icon/package.png'
 import warning from '../../resources/icon/warning.png'
 import event from '../../resources/icon/event2.png'
+
 
 export default class Bellring extends React.Component {
   constructor(props) {
@@ -16,7 +18,7 @@ export default class Bellring extends React.Component {
       dropdownOpen: false
     };
   }
-  toggle() {
+  toggle(){
     this.setState(prevState => ({
       dropdownOpen: !prevState.dropdownOpen
     }));
