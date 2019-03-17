@@ -2,7 +2,7 @@
   "name": "apex-todo",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/dongNguyenViet/reactjsapp",
+  "homepage": "https://dongNguyenViet.github.io/reactjsapp",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "gh-pages": "^2.0.1",
