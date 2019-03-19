@@ -100,7 +100,7 @@ export default class Detail extends Component {
               <button className="modifiedButton" >
                 <img src={this.state.isHover ? whitecheck : greencheck} 
                     alt="modify information"
-                    width={22}
+                    width={30}
                     className="modifyDetail"
                     title="modify information"
                     onMouseOver={this.handleHoverOn}
@@ -174,7 +174,7 @@ export default class Detail extends Component {
               <button className="modifiedButton" >
                 <img src={this.state.isHover ? pencilHover : pencil} 
                     alt="modify information"
-                    width={22}
+                    width={30}
                     className="modifyDetail"
                     title="modify information"
                     onMouseOver={this.handleHoverOn}

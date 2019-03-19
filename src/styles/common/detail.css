@@ -25,9 +25,9 @@
 }
 .modifiedButton{
     position: absolute;
-    right: 16px;
+    right: 0;
     top: 0;
-    margin-top: -5px;
+    margin-right: 15px;
     width: 30px;
     height: 30px;
     border-radius: 5px;
@@ -41,7 +41,9 @@
     background-color: #0cc27e;
 }
 .modifyDetail{
-    margin-right: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 .user-date, .infoDetail{
     width: 100%;
